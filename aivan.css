@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #263248;
+    line-height: 1.7;
+}
+
+header {
+    background: #14213d;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fca311;
+}
+
+.home {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(135deg, #14213d, #315b96);
+    color: white;
+}
+
+.home-content {
+    max-width: 750px;
+}
+
+.welcome {
+    color: #fca311;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.home h1 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+.home p {
+    margin: 15px 0;
+}
+
+a {
+    color: #315b96;
+}
+
+.home a {
+    display: inline-block;
+    background: #fca311;
+    color: #14213d;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+section:not(.home) {
+    padding: 55px 10%;
+}
+
+section h2 {
+    color: #14213d;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    margin: 18px 0 10px;
+    color: #315b96;
+}
+
+section p {
+    margin-bottom: 12px;
+}
+
+footer {
+    background: #14213d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .home {
+        padding: 55px 7%;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    section:not(.home) {
+        padding: 40px 7%;
+    }
+}
