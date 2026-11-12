@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="aivan.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2 class="logo">MyPortfolio.</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#personal">Personal Info</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#java">Java Code</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+            <h1>Hello, I'm <span>Aivan Jeff Primo</span></h1>
+            <h3>BSIT Student</h3>
+
+            <p>
+                I am an IT student who is interested in technology,
+                programming I am willing to
+                learn new things and improve my coding skills.
+            </p>
+
+            <a href="#personal" class="btn">Explore My Portfolio</a>
+        </div>
+    </section>
+
+    <!-- PERSONAL INFORMATION -->
+    <section id="personal">
+        <h2 class="heading">Personal Information</h2>
+
+        <div class="card">
+            <h3>About Me</h3>
+            <p>
+                My name is Aivan Jeff Primo. I am a Bachelor of Science
+                in Information Technology student. I enjoy learning
+                about computers, programming, and coding.
+                My goal is to become a succesful programmer in the future.
+            </p>
+
+            <p><b>Name:</b> Aivan Jeff Primo</p>
+            <p><b>Course:</b> BSIT</p>
+            <p><b>Year Level:</b> First Year</p>
+            <p><b>Section:</b> Block C</p>
+            <p><b>Email:</b> aivan05@gmail.com</p>
+            <p><b>Address:</b> Calem, Guimba Nueva Ecija</p>
+        </div>
+    </section>
+
+    <!-- EDUCATIONAL BACKGROUND -->
+    <section id="education">
+        <h2 class="heading">Educational Background</h2>
+
+        <div class="card">
+            <h3>College</h3>
+            <p>Our Lady of the Sacred Heart College of Guimba</p>
+            <p>Bachelor of Science in Information Technology</p>
+            <p>First Year College - Present</p>
+        </div>
+
+        <div class="card">
+            <h3>Senior High School</h3>
+            <p>Macatcatuit, High School</p>
+            <p>Your Strand</p>
+            <p>Year Graduated: 2026</p>
+        </div>
+
+        <div class="card">
+            <h3>Junior High School</h3>
+            <p>Macatcatuit, High School</p>
+            <p>Year Graduated: 2024</p>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+        <h2 class="heading">My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <h3>Playing Guitar</h3>
+            
+            </div>
+
+            <div class="skill-card">
+                <h3>Playing Basketball</h3>
+                
+            </div>
+
+            <div class="skill-card">
+                <h3>Playing Online Games</h3>
+                
+            </div>
+
+            <div class="skill-card">
+                <h3>Problem Solving</h3>
+               
+            </div>
+
+            <div class="skill-card">
+                <h3>Communication</h3>
+                
+            </div>
+
+            <div class="skill-card">
+                <h3>Teamwork</h3>
+               
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JAVA CODE SECTION -->
+    <section id="java">
+        <h2 class="heading">My Java Project</h2>
+
+        <div class="card">
+            <h3>CC102 Final Performance Task</h3>
+
+            <p>
+                This section contains my Java console-based game
+                developed as my final Performance Task in CC102.
+                The program demonstrates my understanding of
+                Java programming concepts.
+            </p>
+
+            <h3>Java Source Code</h3>
+
+            <pre><code>
+
+
+
+// 
+import java.util.Scanner;
+import java.util.Random;
+
+public class NumberGuessingGame {
+   public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        int secretNumber = random.nextInt(20) + 1;
+        int guess;
+        int attempts = 0;
+
+        System.out.println("==============================");
+        System.out.println("     NUMBER GUESSING GAME");
+        System.out.println("==============================");
+        System.out.println("Guess the number from 1 to 20!");
+        
+        do {
+            System.out.print("\nEnter your guess: ");
+
+            if (input.hasNextInt()) {
+                guess = input.nextInt();
+                attempts++;
+
+                if (guess < 1 || guess > 20) {
+                    System.out.println("Please enter a number from 1 to 20.");
+                }
+                else if (guess < secretNumber) {
+                    System.out.println("Too low! Try again.");
+                }
+                else if (guess > secretNumber) {
+                    System.out.println("Too high! Try again.");
+                }
+                else {
+                    System.out.println("Congratulations! You guessed it!");
+                    System.out.println("Number of attempts: " + attempts);
+                }
+            } 
+            else {
+                System.out.println("Invalid input! Enter a number.");
+                input.next();
+                guess = 0;
+            }
+
+        } while (guess != secretNumber);
+
+        System.out.println("\nThank you for playing!");
+
+        input.close();
+    }
+}
+
+            </code></pre>
+
+           
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 My Personal Portfolio</p>
+        <p>Created by Aivan Jeff Primo | BSIT Student</p>
+    </footer>
+
+</body>
+</html>
